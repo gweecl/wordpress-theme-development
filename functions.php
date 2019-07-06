@@ -4,7 +4,7 @@
  * Include helper functions
  *
  */
-require get_template_directory() . 'lib/theme-helpers.php';
+require get_template_directory() . '/lib/theme-helpers.php';
 
 /**
  * If you are installing Timber as a Composer dependency in your theme, you'll need this block
