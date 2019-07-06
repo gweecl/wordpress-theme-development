@@ -8,8 +8,8 @@
 ## Compiling Assets
 
 * This project make use of [Laravel Mix](https://laravel.com/docs/master/mix)
-* Asset will be compile into `dist`.
-* Versioning / Cache Busting with the `mix` function available with the helpers functions. Refer to [./lib/theme-helpers.php](./lib/theme-helpers.php)
+* Assets will be compile into `dist` directory.
+* Assets loading using `mix` method available with the helpers functions. Refer to [./lib/theme-helpers.php](./lib/theme-helpers.php).
 
 ## Install Theme
 
