@@ -21,7 +21,11 @@ mix.setResourceRoot('/wp-content/themes/' + path.relative('../', 'dist'));
  |
  */
 
-mix.js('static/site.js', 'dist/js');
+mix.js('static/site.js', 'dist/js')
+    .sass('static/style.scss', 'dist/css')
+    .sass('static/style-editor.scss', 'dist/css')
+    .sass('static/style-editor-customizer.scss', 'dist/css')
+    .sass('static/print.scss', 'dist/css');
 
 // Versioning only in Production
 if (mix.inProduction()) {
