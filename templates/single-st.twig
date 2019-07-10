@@ -1,0 +1,24 @@
+{% extends "base.twig" %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+	<div class="content-wrapper">
+		<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+			<!-- <img src="{{ post.thumbnail.src|resize(1200, 300) }}"> -->
+			<section class="article-content entry">
+				<header class="entry-header">
+					<h1 class="entry-title">{{ post.title }}</h1>
+					<div class="entry-meta">
+						<!-- <span class="byline"><a href="{{post.author.path}}"> {{ post.author.name }} </a></span> -->
+						<span class="posted-on">{{ post.date }}</span>
+					</div>
+				</header>
+				<div class="article-body entry-content">
+					{{post.content}}
+				</div>
+			</section>
+		</article>
+	</div><!-- /content-wrapper -->
+{% endblock %}
