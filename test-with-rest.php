@@ -9,6 +9,7 @@
         <div class="entry">
             <div class="entry-content">
                 <?php
+                    // http://localhost/wp-content/themes/theme-a/test-with-rest.php
                     $url = 'http://localhost/wp-json/wp/v2/st';
                     $results = file_get_contents($url);
 
