@@ -1,4 +1,11 @@
 <?php
+
+/**
+ * Include helper functions
+ *
+ */
+require get_template_directory() . '/lib/theme-helpers.php';
+
 /**
  * Timber starter-theme
  * https://github.com/timber/starter-theme
@@ -133,6 +140,10 @@ class StarterSite extends Timber\Site {
 		);
 
 		add_theme_support( 'menus' );
+		
+		// Styling for Guternberg editor
+		add_theme_support( 'editor-styles' );
+		add_editor_style( mix( '/css/style-editor.css') );
 	}
 
 	/** This Would return 'foo bar!'.
