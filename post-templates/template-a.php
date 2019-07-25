@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Post Template A
+Template Name: Template A
 Template Post Type: post, st
 */
 
