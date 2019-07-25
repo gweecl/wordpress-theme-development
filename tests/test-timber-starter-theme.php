@@ -4,7 +4,7 @@ class TestTimberStarterTheme extends WP_UnitTestCase {
 
 	function setUp() {
 		self::_setupStarterTheme();
-		switch_theme( 'theme-a' );
+		switch_theme( basename( dirname( dirname( __FILE__ ) ) ) );
 		require_once __DIR__ . '/../functions.php';
 	}
 
@@ -31,8 +31,8 @@ class TestTimberStarterTheme extends WP_UnitTestCase {
 	}
 
 	static function _setupStarterTheme() {
-		$dest = WP_CONTENT_DIR . '/themes/theme-a';
-		$src  = realpath( __DIR__ . '/../../theme-a/' );
+		$dest = WP_CONTENT_DIR . '/themes/' . basename( dirname( dirname( __FILE__ ) ) );
+		$src  = realpath( __DIR__ . '/../../' . basename( dirname( dirname( __FILE__ ) ) ) );
 		if ( is_dir( $src ) && ! file_exists( $dest ) ) {
 			symlink( $src, $dest );
 		}
