@@ -1,0 +1,32 @@
+{% extends "base.twig" %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+	<div class="content-wrapper">
+		<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+			<!-- <img src="{{ post.thumbnail.src|resize(1200, 300) }}"> -->
+			<h1 class="article-h1">Template A</h1>
+			<section class="article-content entry">
+				<header class="entry-header">
+					<p class="wp-block-tag-cloud">
+						{% for term in post.terms('topic') %}
+						<a href="#" class="tag-cloud-link" style="font-size: 8pt;">
+							{{ term }}</a>
+						{% endfor %}
+					</p>
+					<br>
+					<h1 class="entry-title">{{ post.title }}</h1>
+					<div class="entry-meta">
+						<!-- <span class="byline"><a href="{{post.author.path}}"> {{ post.author.name }} </a></span> -->
+						<span class="posted-on">{{ post.date }}</span>
+					</div>
+				</header>
+				<div class="article-body entry-content">
+					{{post.content}}
+				</div>
+			</section>
+		</article>
+	</div><!-- /content-wrapper -->
+{% endblock %}

@@ -1,0 +1,36 @@
+/** === Tag Cloud === */
+
+.wp-block-tag-cloud {
+
+	.tag-cloud-link {
+		line-height: 1.8;
+		@include font-family( $font__heading );
+		font-size: $font__size-sm;
+		font-weight: bold;
+        color: $color__background-body;
+	}
+
+	&:not(.is-style-outline) .tag-cloud-link {
+		background: $color__background-button;
+	}
+
+	&:not(.is-style-squared) .tag-cloud-link {
+		border-radius: 30px;
+	}
+
+	&.is-style-outline,
+	&.is-style-outline:hover,
+	&.is-style-outline:focus,
+	&.is-style-outline:active {
+		background: transparent;
+		color: $color__background-button;
+
+		.tag-cloud-link {
+			background: transparent;
+
+			&:not(.has-text-color) {
+				color: $color__background-button;
+			}
+		}
+	}
+}
